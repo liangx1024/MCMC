@@ -35,4 +35,3 @@ This returns 5,000 samples after discarding the first half of the chain, reports
 - Use an even `n`; burn-in and plotting ranges are fixed in the source.
 - `gibbs.m` returns the final 1,001 retained states and requires `n >= 2002`; `hal.m` returns the final 501 and requires `n >= 1002`.
 - Density functions used for plotting must support array inputs.
-- These are exploratory implementations; acceptance rates and density plots alone do not establish convergence.
