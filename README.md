@@ -2,7 +2,11 @@
 
 MATLAB experiments in Markov chain Monte Carlo (MCMC) sampling and kernel density estimation (KDE), motivated by Bayesian inference. The project explores proposal scales, acceptance rates, sample distributions, and density-estimation bandwidths.
 
+[Read the report on Bayesian inference, MCMC, and KDE (PDF)](Report.pdf).
+
 ## Methods and files
+
+The MATLAB scripts and functions are in [`src/`](src/).
 
 | Files | Purpose |
 |---|---|
@@ -15,13 +19,14 @@ MATLAB experiments in Markov chain Monte Carlo (MCMC) sampling and kernel densit
 
 ## Requirements
 
-MATLAB with Statistics and Machine Learning Toolbox for sampling. `hal.m` additionally requires Symbolic Math Toolbox. Place the files in MATLAB’s current folder or on its search path.
+MATLAB with Statistics and Machine Learning Toolbox for sampling. `hal.m` additionally requires Symbolic Math Toolbox. Run the example from the repository root.
 
 ## Example
 
 Sample a standard normal distribution:
 
 ```matlab
+addpath('src');
 rng(1);
 f = @(x) exp(-0.5 .* x.^2);   % Unnormalized target
 p = @(x) f(x) ./ sqrt(2*pi);  % Normalized density for plotting
